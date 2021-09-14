@@ -7,3 +7,7 @@ This Python-based program allows you to calculate your net worth with several pa
 - annualSalaryIncrease
 - annualROI
 - timeWorking
+
+
+## Output
+![Output](screenshot202109.png)
