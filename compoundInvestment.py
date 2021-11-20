@@ -1,8 +1,11 @@
+
+
 # Calculate the total savings you can get from a starting annualSalary
-def f(annualSalary, timeWorking):
-    
-    # Other parameters
-    annualSalaryIncrease = 2000
+def f():
+    annualSalary = 80000
+    global timeWorking 
+    timeWorking= 20
+    annualSalaryIncrease = 5000
     super = 0.1 # Superannuation
     annualSavingPercent = 0.1
     tax = 0.04
@@ -15,13 +18,13 @@ def f(annualSalary, timeWorking):
             annualSaving = annualSalary*(super+annualSavingPercent-tax)
             totalSaving = annualSaving
         else: 
+            # The savings includes superannuation + personal savings - tax
             annualSalary += annualSalaryIncrease        
-            annualSaving = annualSalary*(super+annualSavingPercent-tax)
-            totalSaving = totalSaving*annualROI + annualSaving
+            annualSaving = annualSalary * (super+annualSavingPercent-tax)
+            totalSaving = totalSaving * annualROI + annualSaving
         
         print('year:', i, '/ annualSalary:', annualSalary, '/ annualSaving:',annualSaving, '/ totalSaving:', totalSaving)      
     return totalSaving
 
-annualSalary = 40000
-timeWorking = 20
-print('You have saved', f(annualSalary, timeWorking), 'after', timeWorking, 'years working.')
+
+print('You have saved', f(), 'after', timeWorking, 'years working.')
